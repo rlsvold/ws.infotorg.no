@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://ws-test.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/include/Tilgjengelighetskontroll.xsd" filename="Tilgjengelighetskontroll.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://ws-test.infotorg.no/xml/Feil/Feil.xsd" filename="Feil.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://ws-test.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/DetSentraleFolkeregister1_4.xsd" filename="DetSentraleFolkeregister1_4.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://ws-test.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/include/Detaljer.xsd" filename="Detaljer.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://ws-test.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/include/Foedselsnummerkontroll.xsd" filename="Foedselsnummerkontroll.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://ws-test.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/DetSentraleFolkeregister1_4.wsdl" filename="DetSentraleFolkeregister1_4.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://ws-test.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/include/Historikk.xsd" filename="Historikk.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://ws-test.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/include/AntallInnbyggere.xsd" filename="AntallInnbyggere.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://ws-test.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/include/Treffliste.xsd" filename="Treffliste.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://ws-test.infotorg.no/xml/Admin/Transaksjon/2006-07-07/Transaksjon.xsd" filename="Transaksjon.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://ws-test.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/include/TrefflisteHistorikk.xsd" filename="TrefflisteHistorikk.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://ws-test.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/include/Gatenavn.xsd" filename="Gatenavn.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://ws-test.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/include/SjekkResept.xsd" filename="SjekkResept.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://ws-test.infotorg.no/xml/Admin/Brukersesjon/2006-07-07/Brukersesjon.xsd" filename="Brukersesjon.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://ws-test.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/include/GlobaleTyper.xsd" filename="GlobaleTyper.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://ws-test.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/include/GlobaleElementer.xsd" filename="GlobaleElementer.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

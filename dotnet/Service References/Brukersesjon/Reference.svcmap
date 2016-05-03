@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1ef49445-9bec-4882-bce6-4133c7abdaa0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://ws-test.infotorg.no/xml/Admin/Brukersesjon/2006-07-07/Brukersesjon.wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Brukersesjon.wsdl" MetadataType="Wsdl" ID="608ec0f8-d686-481d-83da-241e5f204491" SourceId="1" SourceUrl="http://ws-test.infotorg.no/xml/Admin/Brukersesjon/2006-07-07/Brukersesjon.wsdl" />
+    <MetadataFile FileName="Transaksjon.xsd" MetadataType="Schema" ID="6f4305ee-2c2b-478a-adfe-032ab3ee17f1" SourceId="1" SourceUrl="http://ws-test.infotorg.no/xml/Admin/Transaksjon/2006-07-07/Transaksjon.xsd" />
+    <MetadataFile FileName="Brukersesjon.xsd" MetadataType="Schema" ID="e5e20150-97f4-4246-b91c-7cf2cd00e129" SourceId="1" SourceUrl="http://ws-test.infotorg.no/xml/Admin/Brukersesjon/2006-07-07/Brukersesjon.xsd" />
+    <MetadataFile FileName="Feil.xsd" MetadataType="Schema" ID="5d351334-b43e-47b9-a0c3-84b18cb09ec2" SourceId="1" SourceUrl="http://ws-test.infotorg.no/xml/Feil/Feil.xsd" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

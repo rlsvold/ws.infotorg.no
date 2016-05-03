@@ -1,0 +1,8 @@
+D:\Java_prosjekter\Infotorg\trunk\example\dotNet\SoapIntegration\bin\Release\SoapIntegration.exe.config
+D:\Java_prosjekter\Infotorg\trunk\example\dotNet\SoapIntegration\bin\Release\SoapIntegration.exe
+D:\Java_prosjekter\Infotorg\trunk\example\dotNet\SoapIntegration\bin\Release\SoapIntegration.XmlSerializers.dll
+D:\Java_prosjekter\Infotorg\trunk\example\dotNet\SoapIntegration\bin\Release\SoapIntegration.pdb
+D:\Java_prosjekter\Infotorg\trunk\example\dotNet\SoapIntegration\obj\Release\SoapIntegration.exe
+D:\Java_prosjekter\Infotorg\trunk\example\dotNet\SoapIntegration\obj\Release\SoapIntegration.pdb
+D:\Java_prosjekter\Infotorg\trunk\example\dotNet\SoapIntegration\obj\Release\SoapIntegration.XmlSerializers.dll
+D:\Java_prosjekter\Infotorg\trunk\example\dotNet\SoapIntegration\obj\Release\SoapIntegration.csprojResolveAssemblyReference.cache

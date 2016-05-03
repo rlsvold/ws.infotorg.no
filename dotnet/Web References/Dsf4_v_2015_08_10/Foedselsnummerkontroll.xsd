@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:tns="http://ws.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2015-08-10/include/Foedselsnummerkontroll.xsd" targetNamespace="http://ws.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2015-08-10/include/Foedselsnummerkontroll.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:include schemaLocation="http://ws-test.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2015-08-10/include/GlobaleElementer.xsd" />
+  <xsd:include schemaLocation="http://ws-test.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2015-08-10/include/GlobaleTyper.xsd" />
+  <xsd:complexType name="Foedselsnummerkontroll">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="1" name="RESULT">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="gyldig" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation xml:lang="no">OK, IKKE OK</xsd:documentation>
+                <xsd:documentation xml:lang="en">OK, IKKE OK = NOT OK</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="MESSAGE" type="tns:MESSAGE" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

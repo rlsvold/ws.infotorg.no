@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SoapIntegration.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SoapIntegration_Dsf4_DSFService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://ws-test.infotorg.no/ws/ErgoGroup/DetSentraleFolkeregister1_4.pl</Value>
+    </Setting>
+    <Setting Name="SoapIntegration_Dsf4_v_2015_08_10_DSFService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://ws-test.infotorg.no/ws/ErgoGroup/DetSentraleFolkeregister1_4.pl</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:tns="http://ws.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2015-08-10/include/AntInnbyggereLandFylkeKommune.xsd" targetNamespace="http://ws.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2015-08-10/include/AntInnbyggereLandFylkeKommune.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:include schemaLocation="http://ws-test.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2015-08-10/include/GlobaleElementer.xsd" />
+  <xsd:include schemaLocation="http://ws-test.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2015-08-10/include/GlobaleTyper.xsd" />
+  <xsd:complexType name="AntInnbyggereLandFylkeKommune">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="1" name="RESULT">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:choice>
+              <xsd:element minOccurs="1" maxOccurs="1" name="KOMM" type="tns:Tkomnr">
+                <xsd:annotation>
+                  <xsd:documentation xml:lang="no">Bo-kommune nummer.</xsd:documentation>
+                  <xsd:documentation xml:lang="en">Live-in communenumber.</xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element minOccurs="1" maxOccurs="1" name="FYLK" type="tns:Tfylkenr">
+                <xsd:annotation>
+                  <xsd:documentation xml:lang="no">Bo-fylke nummer.</xsd:documentation>
+                  <xsd:documentation xml:lang="en">Live-in countynumber.</xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element minOccurs="1" maxOccurs="1" name="LAND" type="tns:Tlandkode">
+                <xsd:annotation>
+                  <xsd:documentation xml:lang="no">Bo-land.</xsd:documentation>
+                  <xsd:documentation xml:lang="en">Live-country.</xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+            </xsd:choice>
+            <xsd:choice>
+              <xsd:element minOccurs="1" maxOccurs="1" name="KONA" type="tns:Tkomnavn">
+                <xsd:annotation>
+                  <xsd:documentation xml:lang="no">Bo kommune navn.</xsd:documentation>
+                  <xsd:documentation xml:lang="en">Live-in communename.</xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element minOccurs="1" maxOccurs="1" name="FYNA" type="tns:Tfylkenavn">
+                <xsd:annotation>
+                  <xsd:documentation xml:lang="no">Bo fylke navn.</xsd:documentation>
+                  <xsd:documentation xml:lang="en">Live-in countyname.</xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element minOccurs="1" maxOccurs="1" name="LANA" type="tns:Tlandnavn">
+                <xsd:annotation>
+                  <xsd:documentation xml:lang="no">Bo land.</xsd:documentation>
+                  <xsd:documentation xml:lang="en">Live-country name.</xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+            </xsd:choice>
+            <xsd:element minOccurs="1" maxOccurs="1" name="ANTALL" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation xml:lang="no">Antall</xsd:documentation>
+                <xsd:documentation xml:lang="en">Amount</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="MESSAGE" type="tns:MESSAGE" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

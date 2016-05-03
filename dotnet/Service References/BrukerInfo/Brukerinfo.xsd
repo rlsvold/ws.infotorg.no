@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns:tns="http://ws.infotorg.no/xml/Admin/Brukerinfo/2006-07-07/Brukerinfo.xsd" targetNamespace="http://ws.infotorg.no/xml/Admin/Brukerinfo/2006-07-07/Brukerinfo.xsd" xmlns="http://www.w3.org/2001/XMLSchema">
+  <annotation>
+    <documentation xml:lang="no">
+            Datatyper for brukerinfo fra BackOffice.
+
+            ?? 2006 ErgoGroup AS
+            Forfatter: Dag Lem &lt;dag@nimrod.no&gt;
+            QA: Morten Haugen &lt;morten.haugen@ifront.no&gt;
+        </documentation>
+  </annotation>
+  <element name="hentBrukerinfo">
+    <complexType />
+  </element>
+  <element name="settBrukerinfo">
+    <complexType>
+      <sequence>
+        <element name="kontaktinfo" type="tns:kontaktinfo" />
+      </sequence>
+    </complexType>
+  </element>
+  <element name="Brukerinfo">
+    <complexType>
+      <sequence>
+        <element name="kunde" type="tns:kunde" />
+        <element name="bruker" type="tns:bruker" />
+        <any minOccurs="0" maxOccurs="unbounded" processContents="lax" />
+      </sequence>
+    </complexType>
+  </element>
+  <element name="OK">
+    <complexType />
+  </element>
+  <element name="sendIPhoneFeil">
+    <complexType>
+      <sequence>
+        <element name="brukernavn" type="string" />
+        <element name="feiltype" type="string" />
+        <element name="feilmelding" type="string" />
+        <element name="klassenavn" type="string" />
+        <element name="metodenavn" type="string" />
+      </sequence>
+    </complexType>
+  </element>
+  <element name="hentDebiteringsgrunnlag">
+    <complexType>
+      <sequence>
+        <element minOccurs="0" name="fra" type="date" />
+        <element minOccurs="0" name="til" type="date" />
+        <element minOccurs="0" name="tjeneste" type="string" />
+        <element minOccurs="0" name="produkt" type="string" />
+        <element minOccurs="0" name="referanse" type="string" />
+      </sequence>
+    </complexType>
+  </element>
+  <element name="hentPrisliste">
+    <complexType />
+  </element>
+  <element name="hentNyttPassord">
+    <complexType>
+      <sequence>
+        <element name="brukernavn" type="string" />
+      </sequence>
+    </complexType>
+  </element>
+  <group name="status">
+    <sequence>
+      <element name="statuskode">
+        <simpleType>
+          <restriction base="string">
+            <enumeration value="komplett" />
+            <enumeration value="ingen" />
+            <enumeration value="trunkert" />
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="statustekst" type="string" />
+      <element name="antall" type="integer" />
+    </sequence>
+  </group>
+  <element name="Debiteringsgrunnlag">
+    <complexType>
+      <sequence>
+        <group ref="tns:status" />
+        <element name="debiteringer">
+          <complexType>
+            <sequence>
+              <element minOccurs="0" maxOccurs="unbounded" name="debitering">
+                <complexType>
+                  <sequence>
+                    <element name="tidspunkt" type="dateTime" />
+                    <element name="tjeneste" type="string" />
+                    <element name="produkt" type="string" />
+                    <element name="tjenestebeskrivelse" type="string" />
+                    <element name="produktbeskrivelse" type="string" />
+                    <element name="soekekode" type="string" />
+                    <element name="soekeverdi" type="string" />
+                    <element name="referanse" type="string" />
+                    <element name="antall" type="integer" />
+                    <element name="pris" nillable="true" type="decimal" />
+                    <element name="rabatt" nillable="true" type="decimal" />
+                    <element name="mva" nillable="true" type="decimal" />
+                    <any minOccurs="0" maxOccurs="unbounded" processContents="lax" />
+                  </sequence>
+                </complexType>
+              </element>
+            </sequence>
+          </complexType>
+        </element>
+        <any minOccurs="0" maxOccurs="unbounded" processContents="lax" />
+      </sequence>
+    </complexType>
+  </element>
+  <element name="Prisliste">
+    <complexType>
+      <sequence>
+        <element name="tjenester">
+          <complexType>
+            <sequence>
+              <element minOccurs="0" maxOccurs="unbounded" name="tjeneste">
+                <complexType>
+                  <sequence>
+                    <element name="navn" type="string" />
+                    <element name="beskrivelse" type="string" />
+                    <element name="produkter">
+                      <complexType>
+                        <sequence>
+                          <element minOccurs="0" maxOccurs="unbounded" name="produkt">
+                            <complexType>
+                              <sequence>
+                                <element name="navn" type="string" />
+                                <element name="beskrivelse" type="string" />
+                                <element name="pris" nillable="true" type="decimal" />
+                                <element name="rabatt" nillable="true" type="decimal" />
+                                <element name="mva" nillable="true" type="decimal" />
+                                <any minOccurs="0" maxOccurs="unbounded" processContents="lax" />
+                              </sequence>
+                            </complexType>
+                          </element>
+                        </sequence>
+                      </complexType>
+                    </element>
+                    <any minOccurs="0" maxOccurs="unbounded" processContents="lax" />
+                  </sequence>
+                </complexType>
+              </element>
+            </sequence>
+          </complexType>
+        </element>
+        <any minOccurs="0" maxOccurs="unbounded" processContents="lax" />
+      </sequence>
+    </complexType>
+  </element>
+  <element name="NyttPassord">
+    <complexType>
+      <sequence>
+        <element name="statuskode">
+          <simpleType>
+            <restriction base="string">
+              <enumeration value="OK" />
+              <enumeration value="uregistrert" />
+              <enumeration value="sperret" />
+              <enumeration value="epostfeil" />
+              <enumeration value="fastpassord" />
+              <enumeration value="endretpassord" />
+            </restriction>
+          </simpleType>
+        </element>
+        <element name="statustekst" type="string" />
+        <element minOccurs="0" name="epost" type="string" />
+      </sequence>
+    </complexType>
+  </element>
+  <complexType name="bruker">
+    <sequence>
+      <element name="brukernavn" type="string" />
+      <element name="kontaktinfo" type="tns:kontaktinfo" />
+      <any minOccurs="0" maxOccurs="unbounded" processContents="lax" />
+    </sequence>
+  </complexType>
+  <complexType name="kunde">
+    <sequence>
+      <element name="orgnr" type="string" />
+      <element name="kontaktinfo" type="tns:kontaktinfo" />
+      <element name="kontaktperson" type="tns:kontaktinfo" />
+      <element name="gjenpartsinfo" type="tns:kontaktinfo" />
+      <any minOccurs="0" maxOccurs="unbounded" processContents="lax" />
+    </sequence>
+  </complexType>
+  <complexType name="kontaktinfo">
+    <sequence>
+      <element name="navn" type="string" />
+      <element minOccurs="0" name="postadresse" type="tns:adresse" />
+      <element name="tlfnr" type="string" />
+      <element name="telefaks" type="string" />
+      <element name="epost" type="string" />
+      <any minOccurs="0" maxOccurs="unbounded" processContents="lax" />
+    </sequence>
+  </complexType>
+  <complexType name="adresse">
+    <sequence>
+      <element name="adresse" type="string" />
+      <element name="postnr" type="string" />
+      <element name="poststed" type="string" />
+      <element name="land" type="string" />
+      <any minOccurs="0" maxOccurs="unbounded" processContents="lax" />
+    </sequence>
+  </complexType>
+</schema>

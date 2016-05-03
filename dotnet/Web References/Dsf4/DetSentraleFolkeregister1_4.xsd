@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:inb="http://ws.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/include/AntallInnbyggere.xsd" xmlns:trf="http://ws.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/include/Treffliste.xsd" xmlns:tns="http://ws.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/DetSentraleFolkeregister1_4.xsd" xmlns:det="http://ws.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/include/Detaljer.xsd" xmlns:hist="http://ws.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/include/Historikk.xsd" xmlns:tkon="http://ws.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/include/Tilgjengelighetskontroll.xsd" xmlns:fkon="http://ws.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/include/Foedselsnummerkontroll.xsd" xmlns:trfh="http://ws.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/include/TrefflisteHistorikk.xsd" xmlns:rsp="http://ws.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/include/SjekkResept.xsd" xmlns:gtn="http://ws.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/include/Gatenavn.xsd" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ws.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/DetSentraleFolkeregister1_4.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="http://ws-test.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/include/Detaljer.xsd" namespace="http://ws.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/include/Detaljer.xsd" />
+  <xsd:import schemaLocation="http://ws-test.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/include/Foedselsnummerkontroll.xsd" namespace="http://ws.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/include/Foedselsnummerkontroll.xsd" />
+  <xsd:import schemaLocation="http://ws-test.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/include/Historikk.xsd" namespace="http://ws.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/include/Historikk.xsd" />
+  <xsd:import schemaLocation="http://ws-test.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/include/Treffliste.xsd" namespace="http://ws.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/include/Treffliste.xsd" />
+  <xsd:import schemaLocation="http://ws-test.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/include/TrefflisteHistorikk.xsd" namespace="http://ws.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/include/TrefflisteHistorikk.xsd" />
+  <xsd:import schemaLocation="http://ws-test.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/include/Tilgjengelighetskontroll.xsd" namespace="http://ws.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/include/Tilgjengelighetskontroll.xsd" />
+  <xsd:import schemaLocation="http://ws-test.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/include/AntallInnbyggere.xsd" namespace="http://ws.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/include/AntallInnbyggere.xsd" />
+  <xsd:import schemaLocation="http://ws-test.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/include/Gatenavn.xsd" namespace="http://ws.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/include/Gatenavn.xsd" />
+  <xsd:import schemaLocation="http://ws-test.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/include/SjekkResept.xsd" namespace="http://ws.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/include/SjekkResept.xsd" />
+  <xsd:include schemaLocation="http://ws-test.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/include/GlobaleTyper.xsd" />
+  <xsd:annotation>
+    <xsd:documentation xml:lang="no">
+            Datatyper for DetSentraleFolkeregister1_4.
+            Basert p?? https://infobank.edb.com/InfobankServices-1.3/wsdl/Dsf.wsdl
+
+            ?? 2011 ErgoGroup ErgoGroup
+            Forfatter: Even Aasland &lt;even.aasland@ergogroup.no&gt;
+            Forfatter: ??ivind Stensrud &lt;oivind.stensrud@ergogroup.no&gt;
+        </xsd:documentation>
+  </xsd:annotation>
+  <xsd:element name="hentTrefflisteEnkel" type="tns:treffliste" />
+  <xsd:element name="hentTreffliste" type="tns:treffliste" />
+  <xsd:complexType name="treffliste">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="saksref" type="xsd:string" />
+      <xsd:element minOccurs="0" name="antall" type="xsd:string" />
+      <xsd:element minOccurs="0" name="foedselsnrMor" type="tns:Tfnr" />
+      <xsd:element minOccurs="0" name="foedselsnrFar" type="tns:Tfnr" />
+      <xsd:element minOccurs="0" name="foedselsdato" type="xsd:string" />
+      <xsd:element minOccurs="0" name="etternavn" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fornavn" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fornavnnr" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="no">Ved flere fornavn kan det i dette feltet angis hvilket fornavn det s??kes p??: 1=f??rste fornavn. 2=andre fornavn. B=begge (en av fornavnene m?? stemme) Default='B'</xsd:documentation>
+          <xsd:documentation xml:lang="en">If more than one given name, select which shuld be used for seraching: 1=first. 2=second. B=both (one must match) Default='B'</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="navnUgift" type="xsd:string" />
+      <xsd:element minOccurs="0" name="mellomnavn" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fonetiskNavn" type="tns:Tjn" />
+      <xsd:element minOccurs="0" name="adresse" type="xsd:string" />
+      <xsd:element minOccurs="0" name="husnr" type="tns:Thusnr" />
+      <xsd:element minOccurs="0" name="husnrFra" type="tns:Thusnr" />
+      <xsd:element minOccurs="0" name="husnrTil" type="tns:Thusnr" />
+      <xsd:element minOccurs="0" name="bokstav" type="xsd:string" />
+      <xsd:element minOccurs="0" name="bolignr" type="tns:Tbolignr" />
+      <xsd:element minOccurs="0" name="fonetiskAdresse" type="tns:Tjn" />
+      <xsd:element minOccurs="0" name="gatenr" type="xsd:string" />
+      <xsd:element minOccurs="0" name="gaardsnr" type="xsd:string" />
+      <xsd:element minOccurs="0" name="bruksnr" type="xsd:string" />
+      <xsd:element minOccurs="0" name="festenr" type="xsd:string" />
+      <xsd:element minOccurs="0" name="undernr" type="xsd:string" />
+      <xsd:element minOccurs="0" name="kommunefylkenavn" type="xsd:string" />
+      <xsd:element minOccurs="0" name="kommunefylkenr" type="tns:Tkomfylknr" />
+      <xsd:element minOccurs="0" name="postnr" type="xsd:string" />
+      <xsd:element minOccurs="0" name="foedekommunenr" type="tns:Tkomnr" />
+      <xsd:element minOccurs="0" name="foedekommunenavn" type="xsd:string" />
+      <xsd:element minOccurs="0" name="kjoenn" type="tns:Tkjonn">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="no">Filtrer p?? kj??nn. Gyldige verdier: M - mann. K - kvinne. Blank</xsd:documentation>
+          <xsd:documentation xml:lang="en">Sort by gender. Accepted values: M - male. K - female. Blank</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="ikkeDoed" type="tns:Tjn">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="no">Paramater for kun levende i s??ket. 'J' hvis d??de ikke skal v??re med i s??ket.</xsd:documentation>
+          <xsd:documentation xml:lang="en">Parameter for only people alive in the search. Set 'J' to omit dead people in the search.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="foedselsaar" type="tns:Tfodtaar" />
+      <xsd:element minOccurs="0" name="foedselsaarFra" type="tns:Tfodtaar" />
+      <xsd:element minOccurs="0" name="foedselsaarTil" type="tns:Tfodtaar" />
+      <xsd:element minOccurs="0" name="alderFra" type="xsd:string" />
+      <xsd:element minOccurs="0" name="alderTil" type="xsd:string" />
+      <xsd:element minOccurs="0" name="status" type="xsd:string" />
+      <xsd:element minOccurs="0" name="doedsdatoFra" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="no">D??dsdato fra ????????MMDD</xsd:documentation>
+          <xsd:documentation xml:lang="en">Date of death from YYYYMMDD</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="doedsdatoTil" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="no">D??dsdato til ????????MMDD</xsd:documentation>
+          <xsd:documentation xml:lang="en">Date of death to YYYYMMDD</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="hentDetaljer" type="tns:personsoek">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="no">OBS! V??r oppmerksom p?? at det er en grense p?? 10 s??k pr minutt. Har man behov for ?? gj??re flere s??k pr. minutt finnes det en egen tjeneste for masseoppslag mot DSF som ikke har slike begrensninger.</xsd:documentation>
+      <xsd:documentation xml:lang="en">Please note that there is a maximum limit of 10 searches per minute. A seperate service exists for those who need to exceed this limit.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="hentRelatertePersoner" type="tns:personsoek">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="no">OBS! V??r oppmerksom p?? at det er en grense p?? 10 s??k pr minutt. Har man behov for ?? gj??re flere s??k pr. minutt finnes det en egen tjeneste for masseoppslag mot DSF som ikke har slike begrensninger.</xsd:documentation>
+      <xsd:documentation xml:lang="en">Please note that there is a maximum limit of 10 searches per minute. A seperate service exists for those who need to exceed this limit.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="hentBarn" type="tns:personsoek">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="no">OBS! V??r oppmerksom p?? at det er en grense p?? 10 s??k pr minutt. Har man behov for ?? gj??re flere s??k pr. minutt finnes det en egen tjeneste for masseoppslag mot DSF som ikke har slike begrensninger.</xsd:documentation>
+      <xsd:documentation xml:lang="en">Please note that there is a maximum limit of 10 searches per minute. A seperate service exists for those who need to exceed this limit.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="hentEktefelle" type="tns:personsoek">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="no">OBS! V??r oppmerksom p?? at det er en grense p?? 10 s??k pr minutt. Har man behov for ?? gj??re flere s??k pr. minutt finnes det en egen tjeneste for masseoppslag mot DSF som ikke har slike begrensninger.</xsd:documentation>
+      <xsd:documentation xml:lang="en">Please note that there is a maximum limit of 10 searches per minute. A seperate service exists for those who need to exceed this limit.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="hentForeldre" type="tns:personsoek">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="no">OBS! V??r oppmerksom p?? at det er en grense p?? 10 s??k pr minutt. Har man behov for ?? gj??re flere s??k pr. minutt finnes det en egen tjeneste for masseoppslag mot DSF som ikke har slike begrensninger.</xsd:documentation>
+      <xsd:documentation xml:lang="en">Please note that there is a maximum limit of 10 searches per minute. A seperate service exists for those who need to exceed this limit.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="hentKjernefamilie" type="tns:personsoek">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="no">OBS! V??r oppmerksom p?? at det er en grense p?? 10 s??k pr minutt. Har man behov for ?? gj??re flere s??k pr. minutt finnes det en egen tjeneste for masseoppslag mot DSF som ikke har slike begrensninger.</xsd:documentation>
+      <xsd:documentation xml:lang="en">Please note that there is a maximum limit of 10 searches per minute. A seperate service exists for those who need to exceed this limit.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="personsoek">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="saksref" type="xsd:string" />
+      <xsd:element minOccurs="0" name="foedselsnr" type="tns:Tfnr" />
+      <xsd:element minOccurs="0" name="personid" type="tns:Tinr" />
+      <xsd:element minOccurs="0" name="dufnr" type="xsd:string" />
+      <xsd:element minOccurs="0" name="foedselsdato" type="xsd:string" />
+      <xsd:element minOccurs="0" name="etternavn" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fornavn" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fornavnnr" type="xsd:string" />
+      <xsd:element minOccurs="0" name="navnUgift" type="xsd:string" />
+      <xsd:element minOccurs="0" name="mellomnavn" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fonetiskNavn" type="tns:Tjn" />
+      <xsd:element minOccurs="0" name="adresse" type="xsd:string" />
+      <xsd:element minOccurs="0" name="husnr" type="tns:Thusnr" />
+      <xsd:element minOccurs="0" name="husnrFra" type="tns:Thusnr" />
+      <xsd:element minOccurs="0" name="husnrTil" type="tns:Thusnr" />
+      <xsd:element minOccurs="0" name="bokstav" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fonetiskAdresse" type="tns:Tjn" />
+      <xsd:element minOccurs="0" name="gatenr" type="xsd:string" />
+      <xsd:element minOccurs="0" name="gaardsnr" type="xsd:string" />
+      <xsd:element minOccurs="0" name="bruksnr" type="xsd:string" />
+      <xsd:element minOccurs="0" name="festenr" type="xsd:string" />
+      <xsd:element minOccurs="0" name="kommunefylkenavn" type="xsd:string" />
+      <xsd:element minOccurs="0" name="kommunefylkenr" type="tns:Tkomfylknr" />
+      <xsd:element minOccurs="0" name="postnr" type="xsd:string" />
+      <xsd:element minOccurs="0" name="foedekommunenr" type="tns:Tkomnr" />
+      <xsd:element minOccurs="0" name="foedekommunenavn" type="xsd:string" />
+      <xsd:element minOccurs="0" name="kjoenn" type="tns:Tkjonn" />
+      <xsd:element minOccurs="0" name="ikkeDoed" type="tns:Tjn">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="no">Paramater for kun levende i s??ket. 'J' hvis d??de ikke skal v??re med i s??ket.</xsd:documentation>
+          <xsd:documentation xml:lang="en">Parameter for only people alive in the search. Set 'J' to omit dead people in the search.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="foedselsaar" type="tns:Tfodtaar" />
+      <xsd:element minOccurs="0" name="foedselsaarFra" type="tns:Tfodtaar" />
+      <xsd:element minOccurs="0" name="foedselsaarTil" type="tns:Tfodtaar" />
+      <xsd:element minOccurs="0" name="alderFra" type="xsd:string" />
+      <xsd:element minOccurs="0" name="alderTil" type="xsd:string" />
+      <xsd:element minOccurs="0" name="status" type="xsd:string" />
+      <xsd:element minOccurs="0" name="doedsdatoFra" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="no">D??dsdato fra ????????MMDD</xsd:documentation>
+          <xsd:documentation xml:lang="en">Date of death from YYYYMMDD</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="doedsdatoTil" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="no">D??dsdato til ????????MMDD</xsd:documentation>
+          <xsd:documentation xml:lang="en">Date of death to YYYYMMDD</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="hentFoedselsnummerkontroll">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element minOccurs="0" name="saksref" type="xsd:string" />
+        <xsd:element name="foedselsnr" type="tns:Tfnr" />
+        <xsd:element name="etternavn" type="xsd:string" />
+        <xsd:element name="fornavn" type="xsd:string" />
+        <xsd:element minOccurs="0" name="navnUgift" type="xsd:string" />
+        <xsd:element minOccurs="0" name="mellomnavn" type="xsd:string" />
+        <xsd:element minOccurs="0" name="foedekommunenr" type="tns:Tkomnr" />
+        <xsd:element minOccurs="0" name="foedekommunenavn" type="xsd:string" />
+        <xsd:element minOccurs="0" name="kjoenn" type="tns:Tkjonn" />
+        <xsd:element minOccurs="0" name="kommunefylkenr" type="tns:Tkomfylknr" />
+        <xsd:element minOccurs="0" name="kommunefylkenavn" type="xsd:string" />
+        <xsd:element minOccurs="0" name="adresse" type="xsd:string" />
+        <xsd:element minOccurs="0" name="postnr" type="xsd:string" />
+        <xsd:element minOccurs="0" name="gatenr" type="xsd:string" />
+        <xsd:element minOccurs="0" name="husnr" type="tns:Thusnr" />
+        <xsd:element minOccurs="0" name="bokstav" type="xsd:string" />
+        <xsd:element minOccurs="0" name="bolignr" type="xsd:string" />
+        <xsd:element minOccurs="0" name="gaardsnr" type="xsd:string" />
+        <xsd:element minOccurs="0" name="bruksnr" type="xsd:string" />
+        <xsd:element minOccurs="0" name="festenr" type="xsd:string" />
+        <xsd:element minOccurs="0" name="foedselsnrMor" type="tns:Tfnr" />
+        <xsd:element minOccurs="0" name="foedselsnrFar" type="tns:Tfnr" />
+        <xsd:element minOccurs="0" name="ikkeDoed" type="tns:Tjn" />
+        <xsd:element minOccurs="0" name="fornavnnr" type="xsd:string" />
+        <xsd:element minOccurs="0" name="fonetiskNavn" type="tns:Tjn" />
+        <xsd:element minOccurs="0" name="fonetiskAdresse" type="tns:Tjn" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="hentTilgjengelighetskontroll">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element minOccurs="0" name="saksref" type="xsd:string" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="sjekk" type="xsd:string" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="hentHistorikk" type="tns:historikkSoek" />
+  <xsd:complexType name="historikkSoek">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="saksref" type="xsd:string" />
+      <xsd:element minOccurs="0" name="antall" type="xsd:string" />
+      <xsd:element minOccurs="0" name="foedselsnr" type="tns:Tfnr" />
+      <xsd:element minOccurs="0" name="personid" type="tns:Tinr" />
+      <xsd:element minOccurs="0" name="etternavn" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fornavn" type="xsd:string" />
+      <xsd:element minOccurs="0" name="mellomnavn" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fornavnnr" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fonetiskNavn" type="tns:Tjn" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="hentTrefflisteHistorikkEnkel" type="tns:trefflisteHistorikk" />
+  <xsd:element name="hentTrefflisteHistorikk" type="tns:trefflisteHistorikk" />
+  <xsd:complexType name="trefflisteHistorikk">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="saksref" type="xsd:string" />
+      <xsd:element minOccurs="0" name="antall" type="xsd:string" />
+      <xsd:element minOccurs="0" name="foedselsnrMor" type="tns:Tfnr" />
+      <xsd:element minOccurs="0" name="foedselsnrFar" type="tns:Tfnr" />
+      <xsd:element minOccurs="0" name="foedselsdato" type="xsd:string" />
+      <xsd:element minOccurs="0" name="etternavn" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fornavn" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fornavnnr" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="no">Ved flere fornavn kan det i dette feltet angis hvilket fornavn det s??kes p??: 1=f??rste fornavn. 2=andre fornavn. B=begge (en av fornavnene m?? stemme) Default='B'</xsd:documentation>
+          <xsd:documentation xml:lang="en">If more than one given name, select which shuld be used for seraching: 1=first. 2=second. B=both (one must match) Default='B'</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="navnUgift" type="xsd:string" />
+      <xsd:element minOccurs="0" name="mellomnavn" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fonetiskNavn" type="tns:Tjn" />
+      <xsd:element minOccurs="0" name="adresse" type="xsd:string" />
+      <xsd:element minOccurs="0" name="husnr" type="tns:Thusnr" />
+      <xsd:element minOccurs="0" name="husnrFra" type="tns:Thusnr" />
+      <xsd:element minOccurs="0" name="husnrTil" type="tns:Thusnr" />
+      <xsd:element minOccurs="0" name="bokstav" type="xsd:string" />
+      <xsd:element minOccurs="0" name="bolignr" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fonetiskAdresse" type="tns:Tjn" />
+      <xsd:element minOccurs="0" name="gatenr" type="xsd:string" />
+      <xsd:element minOccurs="0" name="gaardsnr" type="xsd:string" />
+      <xsd:element minOccurs="0" name="bruksnr" type="xsd:string" />
+      <xsd:element minOccurs="0" name="festenr" type="xsd:string" />
+      <xsd:element minOccurs="0" name="undernr" type="xsd:string" />
+      <xsd:element minOccurs="0" name="kommunefylkenavn" type="xsd:string" />
+      <xsd:element minOccurs="0" name="kommunefylkenr" type="tns:Tkomfylknr" />
+      <xsd:element minOccurs="0" name="postnr" type="xsd:string" />
+      <xsd:element minOccurs="0" name="foedekommunenr" type="tns:Tkomnr" />
+      <xsd:element minOccurs="0" name="foedekommunenavn" type="xsd:string" />
+      <xsd:element minOccurs="0" name="kjoenn" type="tns:Tkjonn">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="no">Filtrer p?? kj??nn. Gyldige verdier: M - mann. K - kvinne. Blank</xsd:documentation>
+          <xsd:documentation xml:lang="en">Sort by gender. Accepted values: M - male. K - female. Blank</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="ikkeDoed" type="tns:Tjn">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="no">Paramater for kun levende i s??ket. 'J' hvis d??de ikke skal v??re med i s??ket.</xsd:documentation>
+          <xsd:documentation xml:lang="en">Parameter for only people alive in the search. Set 'J' to omit dead people in the search.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="foedselsaar" type="tns:Tfodtaar" />
+      <xsd:element minOccurs="0" name="foedselsaarFra" type="tns:Tfodtaar" />
+      <xsd:element minOccurs="0" name="foedselsaarTil" type="tns:Tfodtaar" />
+      <xsd:element minOccurs="0" name="alderFra" type="xsd:string" />
+      <xsd:element minOccurs="0" name="alderTil" type="xsd:string" />
+      <xsd:element minOccurs="0" name="status" type="xsd:string" />
+      <xsd:element minOccurs="0" name="doedsdatoFra" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="no">D??dsdato fra ????????MMDD</xsd:documentation>
+          <xsd:documentation xml:lang="en">Date of death from YYYYMMDD</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="doedsdatoTil" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="no">D??dsdato til ????????MMDD</xsd:documentation>
+          <xsd:documentation xml:lang="en">Date of death to YYYYMMDD</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="meldingstype" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="no">For fremtidig funksjonalitet. Blank = Alle meldinger, 'N'= Navneendringer, 'A' = Adresseendringer</xsd:documentation>
+          <xsd:documentation xml:lang="en">Blank = Every announcements, 'N'= Change of name, 'A' = Change of adress</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="hentAntallInnbyggere">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element minOccurs="0" name="saksref" type="xsd:string" />
+        <xsd:element name="kommunenr" type="tns:TkomnrNotBlank">
+          <xsd:annotation>
+            <xsd:documentation xml:lang="no">Kommunenummer, fire siffer ikke blank</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="hentGatenavn">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element minOccurs="0" name="saksref" type="xsd:string" />
+        <xsd:element minOccurs="0" maxOccurs="1" name="antall" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation xml:lang="no">Maksimale antall treff som skal gis tilbake. Ved overskridelse vil dette antallet bli overf??rt.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="gatenavn" type="xsd:string" />
+        <xsd:element minOccurs="0" maxOccurs="1" name="kommunefylkenr" type="tns:Tkomfylknr">
+          <xsd:annotation>
+            <xsd:documentation xml:lang="no">Kommunenr./fylkenr. Ikke oppgitt gir s??k p?? hele landet.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="hentSjekkResept">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element minOccurs="0" name="saksref" type="xsd:string" />
+        <xsd:element name="fnrbarn" type="tns:Tfnr" />
+        <xsd:element name="etternavnbarn" type="xsd:string" />
+        <xsd:element name="fornavnbarn" type="xsd:string" />
+        <xsd:element name="fnrforelder" type="tns:Tfnr" />
+        <xsd:element name="etternavnforelder" type="xsd:string" />
+        <xsd:element name="fornavnforelder" type="xsd:string" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="Detaljer" type="det:Detaljer" />
+  <xsd:element name="RelatertePersoner" type="det:Detaljer" />
+  <xsd:element name="Barn" type="det:Detaljer" />
+  <xsd:element name="Ektefelle" type="det:Detaljer" />
+  <xsd:element name="Foreldre" type="det:Detaljer" />
+  <xsd:element name="Kjernefamilie" type="det:Detaljer" />
+  <xsd:element name="Foedselsnummerkontroll" type="fkon:Foedselsnummerkontroll" />
+  <xsd:element name="Tilgjengelighetskontroll" type="tkon:Tilgjengelighetskontroll" />
+  <xsd:element name="Historikk" type="hist:Historikk" />
+  <xsd:element name="Treffliste" type="trf:Treffliste" />
+  <xsd:element name="TrefflisteEnkel" type="trf:Treffliste" />
+  <xsd:element name="TrefflisteHistorikk" type="trfh:TrefflisteHistorikk" />
+  <xsd:element name="TrefflisteHistorikkEnkel" type="trfh:TrefflisteHistorikk" />
+  <xsd:element name="AntallInnbyggere" type="inb:AntallInnbyggere" />
+  <xsd:element name="Gatenavn" type="gtn:Gatenavn" />
+  <xsd:element name="SjekkResept" type="rsp:SjekkResept" />
+</xsd:schema>

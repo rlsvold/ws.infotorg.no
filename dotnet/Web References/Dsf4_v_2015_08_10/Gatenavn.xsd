@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:tns="http://ws.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2015-08-10/include/Gatenavn.xsd" targetNamespace="http://ws.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2015-08-10/include/Gatenavn.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:include schemaLocation="http://ws-test.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2015-08-10/include/GlobaleElementer.xsd" />
+  <xsd:include schemaLocation="http://ws-test.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2015-08-10/include/GlobaleTyper.xsd" />
+  <xsd:complexType name="Gatenavn">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="1" name="RESULT">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="ANTA" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="FORMANGE" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation xml:lang="no">J = Det finnes flere treff. N = Alle treff vises.</xsd:documentation>
+                <xsd:documentation xml:lang="no">J = There are more results. N = There are no more results.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" maxOccurs="1" name="GATENAVN">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="GATENAVNELEMENT">
+                    <xsd:complexType>
+                      <xsd:all>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Kommnr" type="tns:Tkomnr">
+                          <xsd:annotation>
+                            <xsd:documentation xml:lang="no">Kommunenr</xsd:documentation>
+                            <xsd:documentation xml:lang="en">Municipal number</xsd:documentation>
+                          </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Kommnavn">
+                          <xsd:annotation>
+                            <xsd:documentation xml:lang="no">Kommunenavn</xsd:documentation>
+                            <xsd:documentation xml:lang="en">Municipal name</xsd:documentation>
+                          </xsd:annotation>
+                          <xsd:simpleType>
+                            <xsd:restriction base="xsd:string">
+                              <xsd:maxLength value="30" />
+                            </xsd:restriction>
+                          </xsd:simpleType>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Gatenr" type="tns:Tgatenr">
+                          <xsd:annotation>
+                            <xsd:documentation xml:lang="no">Gatenr</xsd:documentation>
+                            <xsd:documentation xml:lang="en">Streetnumber</xsd:documentation>
+                          </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Gatenavn">
+                          <xsd:annotation>
+                            <xsd:documentation xml:lang="no">Gatenavn</xsd:documentation>
+                            <xsd:documentation xml:lang="en">Streetname</xsd:documentation>
+                          </xsd:annotation>
+                          <xsd:simpleType>
+                            <xsd:restriction base="xsd:string">
+                              <xsd:maxLength value="30" />
+                            </xsd:restriction>
+                          </xsd:simpleType>
+                        </xsd:element>
+                      </xsd:all>
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="MESSAGE" type="tns:MESSAGE" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1C7C93C1-41C2-496D-A9EB-969AB7273C6E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SoapIntegration</RootNamespace>
+    <AssemblyName>SoapIntegration</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GetException.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\BrukerInfo\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Brukersesjon\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestManually.cs" />
+    <Compile Include="TestProxy.cs" />
+    <Compile Include="TMintegration.cs" />
+    <Compile Include="TMmanually.cs" />
+    <Compile Include="TMrequests.cs" />
+    <Compile Include="UserSession.cs" />
+    <Compile Include="Util.cs" />
+    <Compile Include="Web References\Dsf4\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Dsf4_v_2015_08_10\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\BrukerInfo\Brukerinfo.wsdl" />
+    <None Include="Service References\BrukerInfo\Brukerinfo.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BrukerInfo\Brukersesjon.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BrukerInfo\Feil.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BrukerInfo\SoapIntegration.BrukerInfo.Brukerinfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BrukerInfo\SoapIntegration.BrukerInfo.Debiteringsgrunnlag.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BrukerInfo\SoapIntegration.BrukerInfo.NyttPassord.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BrukerInfo\SoapIntegration.BrukerInfo.OK.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BrukerInfo\SoapIntegration.BrukerInfo.Prisliste.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BrukerInfo\SoapIntegration.BrukerInfo.Transaksjon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BrukerInfo\Transaksjon.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Brukersesjon\Brukersesjon.wsdl" />
+    <None Include="Service References\Brukersesjon\Brukersesjon.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Brukersesjon\Feil.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Brukersesjon\SoapIntegration.Brukersesjon.Autorisasjon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Brukersesjon\SoapIntegration.Brukersesjon.Brukersesjon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Brukersesjon\SoapIntegration.Brukersesjon.OK.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Brukersesjon\SoapIntegration.Brukersesjon.Transaksjonsinfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Brukersesjon\Transaksjon.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Dsf4\AntallInnbyggere.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Dsf4\AntallInnbyggere.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Dsf4\Brukersesjon.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Dsf4\Detaljer.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Dsf4\Detaljer.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Dsf4\DetSentraleFolkeregister1_4.wsdl" />
+    <None Include="Web References\Dsf4\DetSentraleFolkeregister1_4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Dsf4\Feil.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Dsf4\Foedselsnummerkontroll.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Dsf4\Foedselsnummerkontroll.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Dsf4\Gatenavn.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Dsf4\Gatenavn.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Dsf4\GlobaleElementer.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Dsf4\GlobaleTyper.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Dsf4\Historikk.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Dsf4\Historikk.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Dsf4\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Dsf4\SjekkResept.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Dsf4\Tilgjengelighetskontroll.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Dsf4\Tilgjengelighetskontroll.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Dsf4\Transaksjon.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Dsf4\Treffliste.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Dsf4\Treffliste.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Dsf4\TrefflisteHistorikk.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Dsf4\TrefflisteHistorikk.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Dsf4_v_2015_08_10\AntallInnbyggere.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Dsf4_v_2015_08_10\AntallInnbyggere.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Dsf4_v_2015_08_10\AntInnbyggereLandFylkeKommune.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Dsf4_v_2015_08_10\AntInnbyggereLandFylkeKommune.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Dsf4_v_2015_08_10\Brukersesjon.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Dsf4_v_2015_08_10\Detaljer.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Dsf4_v_2015_08_10\Detaljer.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Dsf4_v_2015_08_10\DetSentraleFolkeregister1_4.wsdl" />
+    <None Include="Web References\Dsf4_v_2015_08_10\DetSentraleFolkeregister1_4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Dsf4_v_2015_08_10\Feil.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Dsf4_v_2015_08_10\Foedselsnummerkontroll.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Dsf4_v_2015_08_10\Foedselsnummerkontroll.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Dsf4_v_2015_08_10\Gatenavn.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Dsf4_v_2015_08_10\Gatenavn.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Dsf4_v_2015_08_10\GlobaleElementer.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Dsf4_v_2015_08_10\GlobaleTyper.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Dsf4_v_2015_08_10\Historikk.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Dsf4_v_2015_08_10\Historikk.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Dsf4_v_2015_08_10\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Dsf4_v_2015_08_10\SjekkResept.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Dsf4_v_2015_08_10\Tilgjengelighetskontroll.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Dsf4_v_2015_08_10\Tilgjengelighetskontroll.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Dsf4_v_2015_08_10\Transaksjon.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Dsf4_v_2015_08_10\Treffliste.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Dsf4_v_2015_08_10\Treffliste.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Dsf4_v_2015_08_10\TrefflisteHistorikk.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Dsf4_v_2015_08_10\TrefflisteHistorikk.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://ws-test.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/DetSentraleFolkeregister1_4.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Dsf4\</RelPath>
+      <UpdateFromURL>http://ws-test.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/DetSentraleFolkeregister1_4.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>SoapIntegration_Dsf4_DSFService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://ws-test.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2015-08-10/DetSentraleFolkeregister1_4.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Dsf4_v_2015_08_10\</RelPath>
+      <UpdateFromURL>http://ws-test.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2015-08-10/DetSentraleFolkeregister1_4.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>SoapIntegration_Dsf4_v_2015_08_10_DSFService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\BrukerInfo\" />
+    <WCFMetadataStorage Include="Service References\Brukersesjon\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BrukerInfo\configuration91.svcinfo">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BrukerInfo\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BrukerInfo\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Brukersesjon\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Brukersesjon\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Brukersesjon\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

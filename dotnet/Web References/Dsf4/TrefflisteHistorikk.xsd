@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:tns="http://ws.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/include/TrefflisteHistorikk.xsd" targetNamespace="http://ws.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/include/TrefflisteHistorikk.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:include schemaLocation="http://ws-test.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/include/GlobaleElementer.xsd" />
+  <xsd:include schemaLocation="http://ws-test.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/include/GlobaleTyper.xsd" />
+  <xsd:complexType name="TrefflisteHistorikk">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="1" name="RESULT">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="ANTA" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation xml:lang="no">Antall tilsalg som returneres. Numerisk.</xsd:documentation>
+                <xsd:documentation xml:lang="en">Amount of findings returned. Numeric.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" maxOccurs="1" name="ANTAFUN" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation xml:lang="no">Antall tilslag som er funnet i søket. Numerisk.</xsd:documentation>
+                <xsd:documentation xml:lang="en">Amount of findings detected in search. Numeric.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" maxOccurs="1" name="FORMANGE" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation xml:lang="no">Antall tilsalg overskredet. 'J' hvis antall tilsalg er flere enn angitt i ant02 i NTRANS. Hvis ikke: 'N' eller utelatt.</xsd:documentation>
+                <xsd:documentation xml:lang="en">Amount of findings exceeded. 'J' if amount of findings are more than denoted in ant02 in NTRANS. If not: 'N' or omit.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:choice>
+              <xsd:element minOccurs="0" maxOccurs="1" name="HISTRFNR">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element minOccurs="0" maxOccurs="unbounded" name="HISTRFNRELEMENT">
+                      <xsd:complexType>
+                        <xsd:all>
+                          <xsd:element minOccurs="0" maxOccurs="1" name="Fodt" type="tns:Tfodt">
+                            <xsd:annotation>
+                              <xsd:documentation xml:lang="no">Fødselsdato, DDMMÅÅ</xsd:documentation>
+                              <xsd:documentation xml:lang="en">Birthdate, DDMMYY</xsd:documentation>
+                            </xsd:annotation>
+                          </xsd:element>
+                          <xsd:element minOccurs="0" maxOccurs="1" name="Persn" type="tns:Tpers">
+                            <xsd:annotation>
+                              <xsd:documentation xml:lang="no">Personnummer, 5 siste av fødselsnummer</xsd:documentation>
+                              <xsd:documentation xml:lang="en">Personnumber, the 5 last numbers of the birthnumber</xsd:documentation>
+                            </xsd:annotation>
+                          </xsd:element>
+                          <xsd:element minOccurs="0" maxOccurs="1" name="Navn">
+                            <xsd:annotation>
+                              <xsd:documentation xml:lang="en">Name</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:maxLength value="152" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element minOccurs="0" maxOccurs="1" name="Adresse_Status">
+                            <xsd:annotation>
+                              <xsd:documentation xml:lang="no">Indikator: "Død" eller "Utvandret" + dato dersom person er død eller utvandret.</xsd:documentation>
+                              <xsd:documentation xml:lang="en">Indicator: "Død" = Dead or "Utvandret" = Emigrant + date dersom if the person is dead or emigrant</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:maxLength value="40" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element minOccurs="0" maxOccurs="1" name="P.nr" type="tns:Tpostnr">
+                            <xsd:annotation>
+                              <xsd:documentation xml:lang="en">Postal code</xsd:documentation>
+                            </xsd:annotation>
+                          </xsd:element>
+                          <xsd:element minOccurs="0" maxOccurs="1" name="K.nr" type="tns:Tkomnr">
+                            <xsd:annotation>
+                              <xsd:documentation xml:lang="en">Municipal number</xsd:documentation>
+                            </xsd:annotation>
+                          </xsd:element>
+                          <xsd:element minOccurs="0" maxOccurs="1" name="Ettern." type="tns:Tnavn">
+                            <xsd:annotation>
+                              <xsd:documentation xml:lang="en">Last name</xsd:documentation>
+                            </xsd:annotation>
+                          </xsd:element>
+                          <xsd:element minOccurs="0" maxOccurs="1" name="Forn." type="tns:Tnavn">
+                            <xsd:annotation>
+                              <xsd:documentation xml:lang="en">First name</xsd:documentation>
+                            </xsd:annotation>
+                          </xsd:element>
+                          <xsd:element minOccurs="0" maxOccurs="1" name="Bolignr" type="tns:Tbolignr">
+                            <xsd:annotation>
+                              <xsd:documentation xml:lang="en">Housenumber</xsd:documentation>
+                            </xsd:annotation>
+                          </xsd:element>
+                          <xsd:element minOccurs="0" maxOccurs="1" name="H.dato">
+                            <xsd:annotation>
+                              <xsd:documentation xml:lang="no">Historikkdato, ÅÅMMDD</xsd:documentation>
+                              <xsd:documentation xml:lang="en">Historydate, YYMMDD</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:maxLength value="6" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                        </xsd:all>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element minOccurs="0" maxOccurs="1" name="HISTRFOD">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element minOccurs="0" maxOccurs="unbounded" name="HISTRFODELEMENT">
+                      <xsd:complexType>
+                        <xsd:all>
+                          <xsd:element minOccurs="0" name="Ident" type="tns:Tinr" />
+                          <xsd:element minOccurs="0" maxOccurs="1" name="Fodt" type="tns:Tfodt">
+                            <xsd:annotation>
+                              <xsd:documentation xml:lang="no">Fødselsdato, DDMMÅÅ</xsd:documentation>
+                              <xsd:documentation xml:lang="en">Birthdate, DDMMYY</xsd:documentation>
+                            </xsd:annotation>
+                          </xsd:element>
+                          <xsd:element minOccurs="0" maxOccurs="1" name="Navn">
+                            <xsd:annotation>
+                              <xsd:documentation xml:lang="en">Name</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:maxLength value="152" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element minOccurs="0" maxOccurs="1" name="Adresse_Status">
+                            <xsd:annotation>
+                              <xsd:documentation xml:lang="no">Indikator: "Død" eller "Utvandret" + dato dersom person er død eller utvandret.</xsd:documentation>
+                              <xsd:documentation xml:lang="en">Indicator: "Død" = Dead or "Utvandret" = Emigrant + date dersom if the person is dead or emigrant</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:maxLength value="40" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element minOccurs="0" maxOccurs="1" name="P.nr" type="tns:Tpostnr">
+                            <xsd:annotation>
+                              <xsd:documentation xml:lang="en">Postal code</xsd:documentation>
+                            </xsd:annotation>
+                          </xsd:element>
+                          <xsd:element minOccurs="0" maxOccurs="1" name="K.nr" type="tns:Tkomnr">
+                            <xsd:annotation>
+                              <xsd:documentation xml:lang="en">Municipal number</xsd:documentation>
+                            </xsd:annotation>
+                          </xsd:element>
+                          <xsd:element minOccurs="0" maxOccurs="1" name="Ettern." type="tns:Tnavn">
+                            <xsd:annotation>
+                              <xsd:documentation xml:lang="en">Municipal number</xsd:documentation>
+                            </xsd:annotation>
+                          </xsd:element>
+                          <xsd:element minOccurs="0" maxOccurs="1" name="Forn." type="tns:Tnavn">
+                            <xsd:annotation>
+                              <xsd:documentation xml:lang="en">First name</xsd:documentation>
+                            </xsd:annotation>
+                          </xsd:element>
+                          <xsd:element minOccurs="0" maxOccurs="1" name="Bolignr" type="tns:Tbolignr">
+                            <xsd:annotation>
+                              <xsd:documentation xml:lang="en">Housenumber</xsd:documentation>
+                            </xsd:annotation>
+                          </xsd:element>
+                          <xsd:element minOccurs="0" maxOccurs="1" name="H.dato">
+                            <xsd:annotation>
+                              <xsd:documentation xml:lang="no">Historikkdato, ÅÅMMDD</xsd:documentation>
+                              <xsd:documentation xml:lang="en">Historydate, YYMMDD</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:maxLength value="6" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                        </xsd:all>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:choice>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="MESSAGE" type="tns:MESSAGE" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

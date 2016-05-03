@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:brukerinfo="http://ws.infotorg.no/xml/Admin/Brukerinfo/2006-07-07/Brukerinfo.xsd" xmlns:tns="http://ws.infotorg.no/xml/Admin/Brukerinfo/2006-07-07/Brukerinfo.wsdl" xmlns:soapbind="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:brukersesjon="http://ws.infotorg.no/xml/Admin/Brukersesjon/2006-07-07/Brukersesjon.xsd" xmlns:feil="http://ws.infotorg.no/xml/Feil/Feil.xsd" xmlns:transaksjon="http://ws.infotorg.no/xml/Admin/Transaksjon/2006-07-07/Transaksjon.xsd" name="Brukerinfo" targetNamespace="http://ws.infotorg.no/xml/Admin/Brukerinfo/2006-07-07/Brukerinfo.wsdl" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <documentation>
+        Brukerinformasjon / brukeradministrasjon.
+
+        © 2006 ErgoGroup AS
+        Forfatter: Dag Lem &lt;dag@nimrod.no&gt;
+        QA: Morten Haugen &lt;morten.haugen@ifront.no&gt;
+    </documentation>
+  <types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+      <import schemaLocation="http://ws-test.infotorg.no/xml/Admin/Brukersesjon/2006-07-07/Brukersesjon.xsd" namespace="http://ws.infotorg.no/xml/Admin/Brukersesjon/2006-07-07/Brukersesjon.xsd" />
+      <import schemaLocation="http://ws-test.infotorg.no/xml/Admin/Transaksjon/2006-07-07/Transaksjon.xsd" namespace="http://ws.infotorg.no/xml/Admin/Transaksjon/2006-07-07/Transaksjon.xsd" />
+      <import schemaLocation="http://ws-test.infotorg.no/xml/Feil/Feil.xsd" namespace="http://ws.infotorg.no/xml/Feil/Feil.xsd" />
+      <import schemaLocation="http://ws-test.infotorg.no/xml/Admin/Brukerinfo/2006-07-07/Brukerinfo.xsd" namespace="http://ws.infotorg.no/xml/Admin/Brukerinfo/2006-07-07/Brukerinfo.xsd" />
+    </schema>
+  </types>
+  <message name="spoerring">
+    <part name="Brukersesjon" element="brukersesjon:Brukersesjon" />
+    <part name="Transaksjon" element="transaksjon:Transaksjon" />
+  </message>
+  <message name="svar">
+    <part name="Brukersesjon" element="brukersesjon:Brukersesjon" />
+    <part name="Transaksjon" element="transaksjon:Transaksjon" />
+  </message>
+  <message name="feil">
+    <part name="feil" element="feil:feil" />
+  </message>
+  <message name="hentBrukerinfoRequest">
+    <part name="hentBrukerinfo" element="brukerinfo:hentBrukerinfo" />
+  </message>
+  <message name="hentBrukerinfoResponse">
+    <part name="Brukerinfo" element="brukerinfo:Brukerinfo" />
+  </message>
+  <message name="sendIPhoneFeilRequest">
+    <part name="sendIPhoneFeil" element="brukerinfo:sendIPhoneFeil" />
+  </message>
+  <message name="sendIPhoneFeilResponse">
+    <part name="OK" element="brukerinfo:OK" />
+  </message>
+  <message name="settBrukerinfoRequest">
+    <part name="settBrukerinfo" element="brukerinfo:settBrukerinfo" />
+  </message>
+  <message name="settBrukerinfoResponse">
+    <part name="OK" element="brukerinfo:OK" />
+  </message>
+  <message name="hentDebiteringsgrunnlagRequest">
+    <part name="hentDebiteringsgrunnlag" element="brukerinfo:hentDebiteringsgrunnlag" />
+  </message>
+  <message name="hentDebiteringsgrunnlagResponse">
+    <part name="Debiteringsgrunnlag" element="brukerinfo:Debiteringsgrunnlag" />
+  </message>
+  <message name="hentPrislisteRequest">
+    <part name="hentPrisliste" element="brukerinfo:hentPrisliste" />
+  </message>
+  <message name="hentPrislisteResponse">
+    <part name="Prisliste" element="brukerinfo:Prisliste" />
+  </message>
+  <message name="hentNyttPassordRequest">
+    <part name="hentNyttPassord" element="brukerinfo:hentNyttPassord" />
+  </message>
+  <message name="hentNyttPassordResponse">
+    <part name="NyttPassord" element="brukerinfo:NyttPassord" />
+  </message>
+  <portType name="brukerinfoPortType">
+    <operation name="hentBrukerinfo">
+      <input message="tns:hentBrukerinfoRequest" />
+      <output message="tns:hentBrukerinfoResponse" />
+      <fault name="feil" message="tns:feil" />
+    </operation>
+    <operation name="sendIPhoneFeil">
+      <input message="tns:sendIPhoneFeilRequest" />
+      <output message="tns:sendIPhoneFeilResponse" />
+      <fault name="feil" message="tns:feil" />
+    </operation>
+    <operation name="settBrukerinfo">
+      <input message="tns:settBrukerinfoRequest" />
+      <output message="tns:settBrukerinfoResponse" />
+      <fault name="feil" message="tns:feil" />
+    </operation>
+    <operation name="hentDebiteringsgrunnlag">
+      <input message="tns:hentDebiteringsgrunnlagRequest" />
+      <output message="tns:hentDebiteringsgrunnlagResponse" />
+      <fault name="feil" message="tns:feil" />
+    </operation>
+    <operation name="hentPrisliste">
+      <input message="tns:hentPrislisteRequest" />
+      <output message="tns:hentPrislisteResponse" />
+      <fault name="feil" message="tns:feil" />
+    </operation>
+    <operation name="hentNyttPassord">
+      <input message="tns:hentNyttPassordRequest" />
+      <output message="tns:hentNyttPassordResponse" />
+      <fault name="feil" message="tns:feil" />
+    </operation>
+  </portType>
+  <binding name="brukerinfoBinding" type="tns:brukerinfoPortType">
+    <soapbind:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="hentBrukerinfo">
+      <soapbind:operation soapAction="" />
+      <input>
+        <soapbind:header message="tns:spoerring" part="Brukersesjon" use="literal" />
+        <soapbind:body use="literal" />
+      </input>
+      <output>
+        <soapbind:header message="tns:svar" part="Transaksjon" use="literal" />
+        <soapbind:body use="literal" />
+      </output>
+      <fault name="feil">
+        <soapbind:fault use="literal" name="feil" namespace="" />
+      </fault>
+    </operation>
+    <operation name="sendIPhoneFeil">
+      <soapbind:operation soapAction="" />
+      <input>
+        <soapbind:header message="tns:spoerring" part="Brukersesjon" use="literal" />
+        <soapbind:body use="literal" />
+      </input>
+      <output>
+        <soapbind:header message="tns:svar" part="Transaksjon" use="literal" />
+        <soapbind:body use="literal" />
+      </output>
+      <fault name="feil">
+        <soapbind:fault use="literal" name="feil" namespace="" />
+      </fault>
+    </operation>
+    <operation name="settBrukerinfo">
+      <soapbind:operation soapAction="" />
+      <input>
+        <soapbind:header message="tns:spoerring" part="Brukersesjon" use="literal" />
+        <soapbind:body use="literal" />
+      </input>
+      <output>
+        <soapbind:header message="tns:svar" part="Transaksjon" use="literal" />
+        <soapbind:body use="literal" />
+      </output>
+      <fault name="feil">
+        <soapbind:fault use="literal" name="feil" namespace="" />
+      </fault>
+    </operation>
+    <operation name="hentDebiteringsgrunnlag">
+      <soapbind:operation soapAction="" />
+      <input>
+        <soapbind:header message="tns:spoerring" part="Brukersesjon" use="literal" />
+        <soapbind:body use="literal" />
+      </input>
+      <output>
+        <soapbind:header message="tns:svar" part="Transaksjon" use="literal" />
+        <soapbind:body use="literal" />
+      </output>
+      <fault name="feil">
+        <soapbind:fault use="literal" name="feil" namespace="" />
+      </fault>
+    </operation>
+    <operation name="hentPrisliste">
+      <soapbind:operation soapAction="" />
+      <input>
+        <soapbind:header message="tns:spoerring" part="Brukersesjon" use="literal" />
+        <soapbind:body use="literal" />
+      </input>
+      <output>
+        <soapbind:header message="tns:svar" part="Transaksjon" use="literal" />
+        <soapbind:body use="literal" />
+      </output>
+      <fault name="feil">
+        <soapbind:fault use="literal" name="feil" namespace="" />
+      </fault>
+    </operation>
+    <operation name="hentNyttPassord">
+      <soapbind:operation soapAction="" />
+      <input>
+        <soapbind:header message="tns:spoerring" part="Brukersesjon" use="literal" />
+        <soapbind:body use="literal" />
+      </input>
+      <output>
+        <soapbind:header message="tns:svar" part="Transaksjon" use="literal" />
+        <soapbind:body use="literal" />
+      </output>
+      <fault name="feil">
+        <soapbind:fault use="literal" name="feil" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="BrukerinfoService">
+    <port name="brukerinfoPort" binding="tns:brukerinfoBinding">
+      <soapbind:address location="https://ws-test.infotorg.no/ws/Admin/Brukerinfo.pl" />
+    </port>
+  </service>
+</definitions>
