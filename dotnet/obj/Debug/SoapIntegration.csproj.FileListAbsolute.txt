@@ -32,3 +32,9 @@ D:\Utvikling\DotNet\SoapIntegration_customer\infotorgTMintegration-.net\bin\Debu
 D:\Utvikling\DotNet\SoapIntegration_customer\infotorgTMintegration-.net\bin\Debug\SoapIntegration.pdb
 D:\Utvikling\DotNet\SoapIntegration_customer\infotorgTMintegration-.net\obj\Debug\SoapIntegration.exe
 D:\Utvikling\DotNet\SoapIntegration_customer\infotorgTMintegration-.net\obj\Debug\SoapIntegration.pdb
+D:\Utvikling\DotNet\SoapIntegration_Kunde\dotnet\bin\Debug\SoapIntegration.exe.config
+D:\Utvikling\DotNet\SoapIntegration_Kunde\dotnet\obj\Debug\SoapIntegration.csprojResolveAssemblyReference.cache
+D:\Utvikling\DotNet\SoapIntegration_Kunde\dotnet\bin\Debug\SoapIntegration.exe
+D:\Utvikling\DotNet\SoapIntegration_Kunde\dotnet\bin\Debug\SoapIntegration.pdb
+D:\Utvikling\DotNet\SoapIntegration_Kunde\dotnet\obj\Debug\SoapIntegration.exe
+D:\Utvikling\DotNet\SoapIntegration_Kunde\dotnet\obj\Debug\SoapIntegration.pdb

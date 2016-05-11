@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.ServiceModel;
 
+
 namespace SoapIntegration
 {
     /// <summary>
@@ -12,19 +13,11 @@ namespace SoapIntegration
     public class TMintegration
     {
         // Remember to use a user with the necessary privileges 
-        private const string Brukernavn = "xxxxxx"; //Add your username
-        private const string Passord = "xxxxxx";      //Add your password
-        private const Brukersesjon.distribusjonskanal Distribusjonskanal = Brukersesjon.distribusjonskanal.PTP;
-        private const string Systemnavn = "RSKJTEST";//Add your sysname
         private const TMmanually.Environment environment = TMmanually.Environment.Test; // environment you want to test against
 
         static void Main(string[] args)
         {
-            UserSession us = new UserSession();
-            us.brukernavn = Brukernavn;
-            us.passord = Passord;
-            us.systemnavn = Systemnavn;
-            us.distribusjonskanal = Distribusjonskanal;
+            UserSession us = GetUserSession();
 
             // Testing manually integration with TM
             Console.WriteLine("\nDo you want to run a manually soap request against TM [Y/N]?");
@@ -46,6 +39,38 @@ namespace SoapIntegration
 
             Console.WriteLine("\n=============================================================\nDone testing, hit enter to quit!");
             Console.In.Read();
+        }
+
+        private static UserSession GetUserSession()
+        {
+            UserSession us = new UserSession();
+
+            string username = System.Configuration.ConfigurationManager.AppSettings["username"];
+            if (string.IsNullOrEmpty(username))
+            {
+                Console.WriteLine("\nType in your username -> hit enter?");
+                username = Console.ReadLine();
+            }
+            us.brukernavn = username.ToUpper();
+
+            string password = System.Configuration.ConfigurationManager.AppSettings["password"];
+            if (string.IsNullOrEmpty(password))
+            {
+                Console.WriteLine("\nType in your password -> hit enter?");
+                password = Console.ReadLine();
+            }
+            us.passord = password.ToUpper();
+
+            string sysname = System.Configuration.ConfigurationManager.AppSettings["sysname"];
+            if (string.IsNullOrEmpty(sysname))
+            {
+                Console.WriteLine("\nType in your system name(Max 11 chr) -> hit enter?");
+                sysname = Console.ReadLine();
+            }
+            us.systemnavn = sysname;
+
+            us.distribusjonskanal = Brukersesjon.distribusjonskanal.PTP;
+            return us;
         }         
     }
 }
